@@ -45,7 +45,6 @@ app.get('/people', function (req, res) {
 })
 
 app.get('/code/:type', function (req, res) {
-  console.log("requested code: ", req.params.type);
   var js_path = `${__dirname}/${req.params.type}/scripts.js`;
   var html_path = `${__dirname}/${req.params.type}/index.html`;
   var js = fs.readFileSync(js_path, 'utf8');
