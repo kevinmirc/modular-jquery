@@ -11,7 +11,7 @@ var path    = require("path");
 var people = [{name: "Kevin", amount: 16.00}, {name: "Brian", amount: 47.00}, {name: "Michael", amount: 12.00}];
 
 app.get('/', function (req, res) {
-  var html = fs.readFileSync('./views/index.html', 'utf8');
+  var html = fs.readFileSync('./non-modular/index.html', 'utf8');
   res.send(html);
 });
 
@@ -56,18 +56,3 @@ app.get('/code/:type', function (req, res) {
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
-
-// ORGANIZE THIS CODE WITH THIS EXAMPLE:
-// https://github.com/expressjs/express/blob/master/examples/route-separation/index.js
-
-
-
-
-
-
-
-
-
-
-
-
